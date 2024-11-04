@@ -41,6 +41,14 @@ app.MapGet("/", () =>
 })
 .WithName("")
 
+app.MapGet("/test", () =>
+{
+    
+    return "Test page";
+})
+.WithName("GetWeatherForecast")
+.WithOpenApi();
+
 
 app.Run();
 
