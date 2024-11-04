@@ -1,0 +1,21 @@
+appVersion: app/v1
+kind: Deployement
+metadata:
+  name: mykubernetes-demo
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchlabels:
+      app: web
+  template:
+    metadata:
+      labels:
+        app: web
+    spec:
+      containers:
+        - name: mykubernetesapp
+          image: 
+          imagePullPolicy: IfNotPresent
+      imagePullSecrets:
+        - name: acr-secret
