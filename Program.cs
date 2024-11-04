@@ -39,15 +39,14 @@ app.MapGet("/", () =>
     
     return "Home pageo";
 })
-.WithName("")
+.WithName("");
 
 app.MapGet("/test", () =>
 {
     
     return "Test page";
 })
-.WithName("GetWeatherForecast")
-.WithOpenApi();
+.WithName("GetWeatherForecast");
 
 
 app.Run();
